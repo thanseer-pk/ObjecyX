@@ -1,4 +1,6 @@
-﻿namespace ObjecyX;
+﻿using ObjecyX.Pages.Company;
+
+namespace ObjecyX;
 
 public partial class App : Application
 {
@@ -7,5 +9,8 @@ public partial class App : Application
 		InitializeComponent();
 
 		MainPage = new AppShell();
-	}
+
+        Routing.RegisterRoute(nameof(CompanyPage), typeof(CompanyPage));
+
+    }
 }

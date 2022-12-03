@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ObjecyX.Pages.Company.CompanyPage"
+             Title="Company">
+    <ScrollView>
+        
+    <VerticalStackLayout HorizontalOptions="Center" WidthRequest="600" VerticalOptions="Start" >
+        <Label HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Bold">Company Details</Label>
+        <Border  Padding="30" Margin="20">
+            <HorizontalStackLayout>
+                <VerticalStackLayout HorizontalOptions="Center">
+                    <Label x:Name="lb_companyName"
+                     Text="Company Name" />
+                    <Entry  x:Name="companyName"  Margin="3" WidthRequest="280"  Placeholder="Name">
+
+                    </Entry>
+                </VerticalStackLayout>
+                <VerticalStackLayout  HorizontalOptions="Center">
+                    <Label x:Name="lb_companyTaxCode"
+                     Text="TaxCode" />
+                    <Entry x:Name="companyTax" Margin="3" WidthRequest="280" Placeholder="Tax"/>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+        </Border>
+
+        <Border Padding="30" Margin="20" >
+            <HorizontalStackLayout>
+                <VerticalStackLayout>
+                    <Label x:Name="lb_companyAddr1"
+                     Text="Address1" />
+                    <Entry x:Name="CompanyAddress1" Margin="3" WidthRequest="300" Placeholder="Address1">
+
+                    </Entry>
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <Label x:Name="lb_companyAddr2"
+                     Text="Address2" />
+                        <Entry x:Name="CompanyAddress2"  Margin="3" WidthRequest="300" Placeholder="Address2"/>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+        </Border>
+
+        <Border Padding="30" Margin="20">
+            <HorizontalStackLayout>
+                <VerticalStackLayout>
+                    <Label x:Name="lb_city"
+                     Text="City" />
+                        <Entry x:Name="CompanyCity"  Margin="3" WidthRequest="300" Placeholder="City">
+
+                    </Entry>
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <Label x:Name="lbl_country"
+                     Text="Country" />
+                        <Entry x:Name="CompanyCountry" Margin="3" WidthRequest="300" Placeholder="Country"/>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+        </Border>
+
+        <Button x:Name="CreateOrUpdateButton" MaximumWidthRequest="200" Clicked="CreatecompanyCuttonClick" Text="Submit"></Button>
+
+    </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
