@@ -1,5 +1,6 @@
 ﻿using ObjecyX.Model;
 using ObjecyX.Pages.Company;
+using ObjecyX.Pages.Ledger;
 //using ObjecyX.Pages.Ledger;
 using ObjecyX.Services;
 using ObjecyX.Services.interfaces;
@@ -22,12 +23,12 @@ public static class MauiProgram
 
 		//Pages
 		builder.Services.AddSingleton<CompanyPage>();
-        //builder.Services.AddTransient<LedgerPage>();
+        builder.Services.AddSingleton<LedgerAccounts>();
 
-        //Services
-        builder.Services.AddSingleton(typeof(ApplicationDbContext));
+		//Services
+		builder.Services.AddSingleton(typeof(ApplicationDbContext));
 		builder.Services.AddTransient<ICompanyServices, CompanyServices>();
-        builder.Services.AddTransient(typeof(IAccountServices),typeof(AccountServices));
+        builder.Services.AddTransient<IAccountServices,AccountServices>();
 
 		//
         return builder.Build();

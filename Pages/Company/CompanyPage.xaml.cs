@@ -68,4 +68,9 @@ public partial class CompanyPage : ContentPage
 			throw;
 		}
 	}
+
+	private void AccountButton_Clicked(object sender, EventArgs e)
+	{
+
+	}
 }

@@ -59,8 +59,8 @@
             </HorizontalStackLayout>
 
         </Border>
-
-        <Button x:Name="CreateOrUpdateButton" MaximumWidthRequest="200" Clicked="CreatecompanyCuttonClick" Text="Submit"></Button>
+          
+            <Button x:Name="CreateOrUpdateButton" MaximumWidthRequest="200" Clicked="CreatecompanyCuttonClick" Text="Submit"></Button>
 
     </VerticalStackLayout>
     </ScrollView>

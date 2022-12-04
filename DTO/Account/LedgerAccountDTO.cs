@@ -8,7 +8,7 @@ namespace ObjecyX.DTO.Account
 {
     public class LedgerAccountDTO
     {
-        public DateTime Date { get; set; }
+        public double Balance { get; set; }
         public string Name { get; set; } = string.Empty;
     }
 }

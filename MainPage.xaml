@@ -24,6 +24,7 @@
         <Button MaximumWidthRequest="100"  
             MaximumHeightRequest="100" 
             Clicked="GotoCompanyPage" Text="Company"></Button>
+        <Button x:Name="AccountButton" MaximumWidthRequest="200" Clicked="AccountButton_Clicked" Text="Account"></Button>
     </HorizontalStackLayout>
     
 </ContentPage>

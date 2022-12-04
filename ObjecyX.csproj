@@ -50,7 +50,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Pages\Ledger\" />
 	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 
@@ -62,6 +61,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Pages\Company\CompanyPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Ledger\LedgerAccounts.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
