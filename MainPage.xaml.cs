@@ -1,4 +1,6 @@
-﻿using ObjecyX.Pages.Company;
+﻿//using AndroidX.Navigation;
+using ObjecyX.Pages.Company;
+//using ObjecyX.Pages.Ledger;
 
 namespace ObjecyX;
 
@@ -17,8 +19,6 @@ public partial class MainPage : ContentPage
 	 await	Shell.Current.GoToAsync(nameof(CompanyPage));
 	}
 
-
-
-
+	
 }
 

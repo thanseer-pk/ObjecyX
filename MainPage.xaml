@@ -3,8 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             BackgroundColor="AliceBlue"
              x:Class="ObjecyX.MainPage">
-    <HorizontalStackLayout VerticalOptions="Start" HorizontalOptions="End">
+    <ContentPage.Title>ObjecyX</ContentPage.Title>
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Example Item"
+                 IconImageSource="example_icon.png"
+                 Order="Primary"
+                 Priority="0" />
+        <ToolbarItem Text="Example Item"
+                 IconImageSource="example_icon.png"
+                 Order="Primary"
+                 Priority="0" />
+        <ToolbarItem Text="Example Item"
+                 IconImageSource="example_icon.png"
+                 Order="Primary"
+                 Priority="0" />
+    </ContentPage.ToolbarItems>
+
+    <HorizontalStackLayout VerticalOptions="Start" HorizontalOptions="End">
         <Button MaximumWidthRequest="100"  
             MaximumHeightRequest="100" 
             Clicked="GotoCompanyPage" Text="Company"></Button>

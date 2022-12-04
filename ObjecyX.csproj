@@ -50,6 +50,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Pages\Ledger\" />
 	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 

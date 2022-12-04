@@ -1,5 +1,6 @@
 ﻿//using Java.Net;
 using Microsoft.Data.SqlClient;
+using Microsoft.Maui.Controls;
 using ObjecyX.DTO.Company;
 using ObjecyX.Model;
 using ObjecyX.Services.interfaces;
@@ -59,10 +60,40 @@ namespace ObjecyX.Services
             return new();
         }
 
-        public  Task<Company?> UpdateAsync(Company company)
+        public  async Task<Company?> UpdateAsync(CreateCompanyDTO model)
         {
-            throw new NotImplementedException();
+
+            try
+            {
+                using (var conn=new SqlConnection(DbContext.connectionString))
+                {
+                    String commandText = "spUpdateCompany";
+                    SqlCommand cmd = new SqlCommand(commandText,conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    //
+                    await conn.OpenAsync();
+                    cmd.Parameters.AddWithValue("@name", model.Name);
+                    cmd.Parameters.AddWithValue("@taxnumber", model.TaxNumber);
+                    cmd.Parameters.AddWithValue("@addr1", model.Addr1);
+                    cmd.Parameters.AddWithValue("@addr2", model.Addr2);
+                    cmd.Parameters.AddWithValue("@city", model.City);
+                    cmd.Parameters.AddWithValue("@country", model.Country);
+
+                    var status=await cmd.ExecuteNonQueryAsync();
+                    await conn.CloseAsync();
+                    return null;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+          
+        
         }
+
+
 
         public async Task<Company?> Get()
         {

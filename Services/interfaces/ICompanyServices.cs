@@ -11,7 +11,7 @@ namespace ObjecyX.Services.interfaces
     public interface ICompanyServices
     {
           Task<Company?> CreateAsync(CreateCompanyDTO model);
-          Task<Company?> UpdateAsync(Company company);
+          Task<Company?> UpdateAsync(CreateCompanyDTO model);
           Task<Company?> Get();
     }
 }
