@@ -12,6 +12,6 @@ public partial class App : Application
 		MainPage = new AppShell();
 
         Routing.RegisterRoute(nameof(CompanyPage), typeof(CompanyPage));
-        Routing.RegisterRoute(nameof(LedgerAccounts), typeof(LedgerAccounts));
+        Routing.RegisterRoute(nameof(LedgerAccountsPage), typeof(LedgerAccountsPage));
     }
 }

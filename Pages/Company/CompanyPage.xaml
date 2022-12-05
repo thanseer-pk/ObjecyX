@@ -7,7 +7,7 @@
         
     <VerticalStackLayout HorizontalOptions="Center" WidthRequest="600" VerticalOptions="Start" >
         <Label HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Bold">Company Details</Label>
-        <Border  Padding="30" Margin="20">
+        <Border  Padding="30" Margin="20" >
             <HorizontalStackLayout>
                 <VerticalStackLayout HorizontalOptions="Center">
                     <Label x:Name="lb_companyName"

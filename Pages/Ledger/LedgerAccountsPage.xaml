@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ObjecyX.Pages.Ledger.LedgerAccountsPage"
+             xmlns:viewmodel="clr-namespace:ObjecyX.ViewModels.LedgerAccount"
+             xmlns:model="clr-namespace:ObjecyX.Model.Account"
+             x:DataType="viewmodel:LedgerAccountsVM"
+             Title="LedgerAccountsPage">
+    <Grid>
+        <Label Text="{Binding Ledgers.Count}"></Label>
+        <ListView ItemsSource="{Binding Ledgers}" x:Name="AccoumtListview">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="{x:Type model:LedgerAccount}">
+                    <ViewCell>
+                        <Label Text="{Binding Name}"></Label>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+</ContentPage>

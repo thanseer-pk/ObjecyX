@@ -22,7 +22,7 @@ public partial class MainPage : ContentPage
 
 	private async void AccountButton_Clicked(object sender, EventArgs e)
 	{
-        await Shell.Current.GoToAsync(nameof(LedgerAccounts));
+        await Shell.Current.GoToAsync(nameof(LedgerAccountsPage));
     }
 }
 

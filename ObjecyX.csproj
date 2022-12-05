@@ -50,10 +50,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="ViewModels\" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <Compile Update="Pages\Company\CompanyPage.xaml.cs">
 	    <DependentUpon>CompanyPage.xaml</DependentUpon>
 	  </Compile>
@@ -63,12 +59,13 @@
 	  <MauiXaml Update="Pages\Company\CompanyPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Ledger\LedgerAccounts.xaml">
+	  <MauiXaml Update="Pages\Ledger\LedgerAccountsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0-preview1" />
 	  <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.1" />
 	</ItemGroup>
 
